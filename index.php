@@ -1,3 +1,6 @@
+<?php
+    require "inc/head.php";
+  ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>

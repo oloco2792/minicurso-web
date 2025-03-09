@@ -1,0 +1,12 @@
+Notas Sobre el Curso
+- Al ID se le marca la casilla A_I, porque es un numero auto incremental. Al hacerlo lo marca como llave primaria
+
+// Una clave principal o llave primaria es una columna especial o conjunto de columnas en una tabla de base de datos que identifica de manera única cada registro en la tabla.
+
+- Al declarar la longitud de una columna de tipo decimal, la sintaxis es [N,D] donde N es la longitud y D la cantidad de decimales que puedes colocar
+
+- En la tabla de producto se definen las dos columnas en las llaves primarias. Se les llama tablas foraneas y permite establecer la relacion entre las otras tablas
+
+- Para relacionar las tablas, se debe indexar las llaves foraneas y luego crear la relacion en el diseñador
+
+- Para crear una copia de seguridad, puedes usar Exportar. Si seleccinas personalizada y vas a Opciones de creacion de objetos y seleccionas la casilla Agregar sentencia CREATE DATABASE / USE ,puedes importar la base de datos directamente, sin tener que crearla otra vez
