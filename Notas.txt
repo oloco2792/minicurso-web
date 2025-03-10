@@ -10,3 +10,5 @@ Notas Sobre el Curso
 - Para relacionar las tablas, se debe indexar las llaves foraneas y luego crear la relacion en el diseñador
 
 - Para crear una copia de seguridad, puedes usar Exportar. Si seleccinas personalizada y vas a Opciones de creacion de objetos y seleccionas la casilla Agregar sentencia CREATE DATABASE / USE ,puedes importar la base de datos directamente, sin tener que crearla otra vez
+
+- Require e Include cumplen la misma funcion salvo al fallar. Include seguira ejecutando el resto del script con normalidad, mientras que Require detiene toda la ejecucion en caso de un error

@@ -1,0 +1,29 @@
+body,html{/*Para que el documento ocupe todo el espacio*/
+    height: 100%;
+    width: 100%;
+}
+
+.main-container{/*Para que la caja llene todo el espacio disponible*/
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-container > .login{/*Buscar la clase login dentro de main-container*/
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+.main-container > .hero-body{/*Buscar la clase login dentro de main-container*/
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+.form-inline{/**/
+    display: inline-flex;
+}

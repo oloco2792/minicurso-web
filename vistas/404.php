@@ -1,0 +1,13 @@
+<!--Si se intenta cargar un pagina que nop existe, se cargara este script por defecto-->
+<div class="main-container">
+    <section class="hero-body">
+	  	<div class="hero-body">
+		    <p class="title">
+		      Error 404 =(
+		    </p>
+		    <p class="subtitle">
+		      Pagina no encontrada
+		    </p>
+	  	</div>
+	</section>
+</div>
