@@ -47,12 +47,33 @@ if(verificar_datos("[a-zA-Z]{6,10},",$nombre)){
 function limpiar_cadena($cadena){
     $cadena = trim($cadena);//trim quita los espacios al inicio y final de la cadena
     $cadena = stripslashes($cadena);//stripslashes quita las barras del string con comillas escapadas
-    $cadena = str_ireplace($cadena);
+    //str_ireplace reemplaza el texto mediante una bisqueda (?) pero esta version es insensible a mayusculas (chequear documentacion)
+    //Sintaxix: str_ireplace("paraCambiar", "porLoQueSeCambiara", "enDondeSeBuscara") [ojala y se entienda]
+    //Con esto eliminamos cualquier input de codigo que pueda inteferir con el programa de forma no deseada
+    $cadena = str_ireplace("<script>", "", $cadena);
+    $cadena = str_ireplace("</script>", "", $cadena);
+    $cadena = str_ireplace("</script>", "", $cadena);
+    $cadena = str_ireplace("<script src", "", $cadena);
+    $cadena = str_ireplace("<script type=", "", $cadena);
+    $cadena = str_ireplace("SELECT * FROM", "", $cadena);
+    $cadena = str_ireplace("DELETE FROM", "", $cadena);
+    $cadena = str_ireplace("INSERT INTO", "", $cadena);
+    $cadena = str_ireplace("DROP TABLE", "", $cadena);
+    $cadena = str_ireplace("DROP DATABASE", "", $cadena);
+    $cadena = str_ireplace("TRUNCATE TABLE", "", $cadena);
+    $cadena = str_ireplace("SHOW TABLES;", "", $cadena);
+    $cadena = str_ireplace("SHOW DATABASE;", "", $cadena);
+    $cadena = str_ireplace("SHOW DATABASE;", "", $cadena);
+    $cadena = str_ireplace("<?php", "", $cadena);
+    $cadena = str_ireplace("?>", "", $cadena);
+    $cadena = str_ireplace("--", "", $cadena);
+    $cadena = str_ireplace("^", "", $cadena);
+    $cadena = str_ireplace("<", "", $cadena);
+    $cadena = trim($cadena);
+    $cadena = stripslashes($cadena);
+
+    return $cadena;
 }
-
-
-
-
 
 ?>
 
