@@ -75,5 +75,20 @@ function limpiar_cadena($cadena){
     return $cadena;
 }
 
+//FUNCION PARA RENOMBRAR FOTOS
+//Elimina cualquier separador que pueda usarse cuando el usuario suba una foto. 
+//Ademas coloca al final un numero aleatorio para evitar conflicto en caso de subir mas veces la misma foto
+function renombrar_fotos($nombre){
+    $nombre = str_ireplace(" ", "_", $nombre);
+    $nombre = str_ireplace("/", "_", $nombre);
+    $nombre = str_ireplace("#", "_", $nombre);
+    $nombre = str_ireplace("-", "_", $nombre);
+    $nombre = str_ireplace("$", "_", $nombre);
+    $nombre = str_ireplace(".", "_", $nombre);
+    $nombre = str_ireplace(",", "_", $nombre);
+    $nombre = $nombre."_".rand(0,100);
+
+    return $nombre;
+}
 ?>
 
